@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>TwinMotion</title>
-  <link rel="icon" type="image/png" href="dist/media/Favicon_TwinMotion.png">
+  <link rel=“icon” href=”dist/media/Favicon.ico” type=“image/x-icon”>
+  <link rel=“shortcut icon” href=“favicon.ico” type=“image/x-icon”>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +27,9 @@
   </section>
   <div class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }">
     <template x-for="(video, index) in [
-        { img: '/media/Myprotein Kaventers.png', url: 'https://twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'Video description here, some more words and stuff to describe the video' },
-        { img: '/media/Chatloop.png', url: 'https://twinmotion.studio/Chatloop.mp4', title: 'Chatloop', desc: 'Video description here, some more words and stuff to describe the video' },
-        { img: '/media/AI for good.png', url: 'https://twinmotion.studio/AI%20for%20good.mp4', title: 'AI Summit 2024', desc: 'Video description here, some more words and stuff to describe the video' }
+        { img: '/media/Myprotein Kaventers.png', url: 'https://pub-3c6207ce158242ae831f348a1046cac9.r2.dev/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'Video description here, some more words and stuff to describe the video' },
+        { img: '/media/Chatloop.png', url: 'https://pub-3c6207ce158242ae831f348a1046cac9.r2.dev/Chatloop.mp4', title: 'Chatloop', desc: 'Video description here, some more words and stuff to describe the video' },
+        { img: '/media/AI for good.png', url: 'https://pub-3c6207ce158242ae831f348a1046cac9.r2.dev/AI%20for%20good.mp4', title: 'AI Summit 2024', desc: 'Video description here, some more words and stuff to describe the video' }
     ]" :key="index">
         <div class="relative cursor-pointer group" @click="videoSrc = video.url; showLightbox = true">
             <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-100 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-85 transition-all">
