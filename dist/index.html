@@ -26,7 +26,7 @@
     <template x-for="(video, index) in [
         { img: '/media/AI for good.png', url: 'https://cfae44c48054ba6750f067f8032377f6.r2.cloudflarestorage.com/videos/AI for good.mp4', title: 'Video 1', desc: 'Description 1' },
         { img: '/media/Chatloop.png', url: 'https://cfae44c48054ba6750f067f8032377f6.r2.cloudflarestorage.com/videos/Chatloop.mp4', title: 'Video 2', desc: 'Description 2' },
-        { img: '/media/Myprotein Kaventers.png', url: 'https://player.vimeo.com/video/418503998?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479' , title: 'Video 3', desc: 'Description 3' }
+        { img: '/media/Myprotein Kaventers.png', url: 'https://player.vimeo.com/video/418503998' , title: 'Video 3', desc: 'Description 3' }
     ]" :key="index">
         <div class="relative cursor-pointer group" @click="videoSrc = video.url; showLightbox = true">
             <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-100 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-85 transition-all">
@@ -56,7 +56,7 @@
 
 
     <!-- component -->
-
+    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1055154307?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Myprotein Kaventers"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 </body>
 </html>
 
