@@ -12,17 +12,17 @@
 </head>
 <body class="bg-black lg:max-w-600 p-10 m-auto">
   <section>
-    <div class="m-auto p-10">
-    <dotlottie-player src="/workspaces/TwinMotion/dist/media/TwinMotion.lottie" class="h-auto w-70 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+    <div class="m-auto">
+    <dotlottie-player src="https://lottie.host/65128fba-0bd7-4555-b154-da5392556fb3/il9DRLhdLL.lottie" class="h-auto w-70 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
   </div>
   <div class="m-auto">
-  <h2 class="text-white font-mono underline pl-10">Work</h2>
+  <h2 class="text-white font-mono underline">Work</h2>
   </div>
   </section>
 
 
   </section>
-  <div class="justify-center items-center lg:max-w-600 p-10 grid xl:grid-cols-3 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }">
+  <div class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }">
     <template x-for="(video, index) in [
         { img: '/media/Myprotein Kaventers.png', url: 'https://twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'Video description here, some more words and stuff to describe the video' },
         { img: '/media/Chatloop.png', url: 'https://twinmotion.studio/Chatloop.mp4', title: 'Chatloop', desc: 'Video description here, some more words and stuff to describe the video' },
@@ -30,8 +30,8 @@
     ]" :key="index">
         <div class="relative cursor-pointer group" @click="videoSrc = video.url; showLightbox = true">
             <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-100 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-85 transition-all">
-                <h3 class="text-xl font-semibold" x-text="video.title"></h3>
-                <p class="text-sm" x-text="video.desc"></p>
+                <h3 class="text-xl font-semibold px-5" x-text="video.title"></h3>
+                <p class="text-sm px-5" x-text="video.desc"></p>
             </div>
             <div>
                 <img :src="video.img" class="w-full h-auto object-cover rounded-lg shadow-lg" />
