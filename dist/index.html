@@ -27,14 +27,14 @@
   </section>
   <div class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }">
     <template x-for="(video, index) in [
-        { img: '/media/Myprotein Kaventers.png', url: 'https://pub-3c6207ce158242ae831f348a1046cac9.r2.dev/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'Video description here, some more words and stuff to describe the video' },
-        { img: '/media/Chatloop.png', url: 'https://pub-3c6207ce158242ae831f348a1046cac9.r2.dev/Chatloop.mp4', title: 'Chatloop', desc: 'Video description here, some more words and stuff to describe the video' },
-        { img: '/media/AI for good.png', url: 'https://pub-3c6207ce158242ae831f348a1046cac9.r2.dev/AI%20for%20good.mp4', title: 'AI Summit 2024', desc: 'Video description here, some more words and stuff to describe the video' }
+        { img: '/media/Myprotein Kaventers.png', url: 'https://pub-3c6207ce158242ae831f348a1046cac9.r2.dev/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'After Effects project using Trapcode Particluar to create explosions/depth' },
+        { img: '/media/Chatloop.png', url: 'https://pub-3c6207ce158242ae831f348a1046cac9.r2.dev/Chatloop.mp4', title: 'Chatloop', desc: 'After Effects project using designs I created in Figma' },
+        { img: '/media/AI for good.png', url: 'https://pub-3c6207ce158242ae831f348a1046cac9.r2.dev/AI%20for%20good.mp4', title: 'AI Summit 2024', desc: 'Cinema 4D project using some custom glass materials I created' }
     ]" :key="index">
         <div class="relative cursor-pointer group" @click="videoSrc = video.url; showLightbox = true">
             <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-100 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-85 transition-all">
                 <h3 class="text-xl font-semibold px-5" x-text="video.title"></h3>
-                <p class="text-sm px-5" x-text="video.desc"></p>
+                <p class="text-sm px-20" x-text="video.desc"></p>
             </div>
             <div>
                 <img :src="video.img" class="w-full h-auto object-cover rounded-lg shadow-lg" />
@@ -59,6 +59,32 @@
 
 
     <!-- component -->
+  <secion>
+    <h2 class="text-white font-mono underline py-5">About Me</h2>
+    <p class="text-sm text-white"> Hi! I’m Charlie Dixon, a 2D/3D Motion Designer with over 12 years of industry experience. I specialise in After Effects but I'm also comfortable in Cinema 4D w/Redshift.
+
+      Over the years, I’ve worked in both small, agile teams and large-scale productions, adapting to different workflows and creative challenges. I spent five years at THG Studios, where I led the Post-Production team as Director of Post-Production.
+      
+      This website may be simple for now, but I built it from scratch using HTML and Tailwind CSS - a project that lets me learn and experiment as I go. Stay tuned for more content and animations as I continue to learn.
+      
+      Let’s create something great together. Get in touch!
+      
+      </p>
+
+  </secion>
+
+  <secion>
+    <h2 class="text-white font-mono underline py-5">Contact</h2>
+    <p class="text-sm text-white"> 
+      <a href= "mailto:hello@twinmotion.studio">hello@twinmotion.studio</a> <br />
+      
+      </p>
+      <p class="py-2 text-sm text-white"> 
+        <a href= "www.linkedin.com/in/charlie-dixon-2016b960">LinkedIn</a>
+        </p>
+  </secion>
+
+
 
 </body>
 </html>
