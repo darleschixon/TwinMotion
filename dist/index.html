@@ -32,16 +32,16 @@
 
 
   </section>
-  <div
-    class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 gap-4 m-auto duration-500 relative transform transition-all delay-500 translate-y-12 ease-out opacity-0"
-    data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'
+  <div class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 gap-4 m-auto"
     x-data="{ videoSrc: '', showLightbox: false }">
     <template x-for="(video, index) in [
         { img: '/media/Myprotein Kaventers.png', url: 'https://videos.twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'After Effects / Trapcode Particluar' },
         { img: '/media/Chatloop.png', url: 'https://videos.twinmotion.studio/Chatloop.mp4', title: 'Chatloop', desc: 'After Effects / Figma' },
         { img: '/media/AI for good.png', url: 'https://videos.twinmotion.studio/AI%20for%20good.mp4', title: 'AI Summit 2024', desc: 'Cinema 4D / Redshift' }
     ]" :key="index">
-      <div class="relative cursor-pointer group" @click="videoSrc = video.url; showLightbox = true">
+      <div class="relative cursor-pointer group block duration-500 transform transition-all delay-500 translate-y-12 ease-out opacity-0" 
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"}'
+      @click="videoSrc = video.url; showLightbox = true">
         <div
           class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-100 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-85 transition-all">
           <h3 class="text-xl font-semibold px-5" x-text="video.title"></h3>
@@ -56,7 +56,7 @@
 
     <!-- Lightbox Modal -->
 
-    <div x-show="showLightbox" class="z-50 fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-6" x-cloak
+    <div x-show="showLightbox" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-6" x-cloak
       @click="showLightbox = false; videoSrc = ''">
       <div class="relative w-full max-w-4xl bg-black p-4 rounded-lg">
         <button class="absolute top-2 right-2 text-white text-3xl p-3 z-50"
@@ -78,7 +78,8 @@
       class="text-white font-mono underline py-5 block duration-500 relative transform transition-all delay-700 translate-y-12 ease-out opacity-0"
       data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>About Me</h2>
     <p class="text-sm text-white block duration-500 relative transform transition-all delay-900 translate-y-12 ease-out opacity-0"
-    data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'> Hi! I’m Charlie Dixon, a 2D/3D Motion Artist with over 12 years of industry
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'> Hi! I’m Charlie Dixon, a 2D/3D
+      Motion Artist with over 12 years of industry
       experience. I specialise in After Effects but I'm also comfortable in Cinema 4D w/Redshift.
 
       Over the years, I’ve worked in both small, agile teams and large-scale productions, adapting to different
@@ -95,15 +96,16 @@
   </secion>
 
   <secion>
-    <h2 class="text-white font-mono underline py-5 block duration-500 relative transform transition-all delay-1100 translate-y-12 ease-out opacity-0"
-    data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>Contact</h2>
+    <h2
+      class="text-white font-mono underline py-5 block duration-500 relative transform transition-all delay-1100 translate-y-12 ease-out opacity-0"
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>Contact</h2>
     <p class="text-sm text-white block duration-500 relative transform transition-all delay-1300 translate-y-12 ease-out opacity-0"
-    data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>
       <a href="mailto:hello@twinmotion.studio">hello@twinmotion.studio<br /></a>
 
     </p>
     <p class="py-2 text-sm text-white block duration-500 relative transform transition-all delay-1500 translate-y-12 ease-out opacity-0"
-    data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>
       <a href="https://www.linkedin.com/in/charlie-dixon-2016b960" target="_blank">LinkedIn</a>
     </p>
   </secion>
