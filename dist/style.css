@@ -1966,6 +1966,9 @@
   .opacity-0 {
     opacity: 0%;
   }
+  .opacity-100 {
+    opacity: 100%;
+  }
   .mix-blend-plus-darker {
     mix-blend-mode: plus-darker;
   }
@@ -2106,6 +2109,30 @@
   }
   .transition-normal {
     transition-behavior: normal;
+  }
+  .delay-100 {
+    transition-delay: 100ms;
+  }
+  .delay-300 {
+    transition-delay: 300ms;
+  }
+  .delay-500 {
+    transition-delay: 500ms;
+  }
+  .delay-700 {
+    transition-delay: 700ms;
+  }
+  .delay-900 {
+    transition-delay: 900ms;
+  }
+  .delay-1100 {
+    transition-delay: 1100ms;
+  }
+  .delay-1300 {
+    transition-delay: 1300ms;
+  }
+  .delay-1500 {
+    transition-delay: 1500ms;
   }
   .duration-500 {
     --tw-duration: 500ms;

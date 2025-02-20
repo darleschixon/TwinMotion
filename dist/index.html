@@ -12,31 +12,29 @@
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x/dist/cdn.min.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="tailwind.config.js"></script>
 
 </head>
 
 <body class="bg-black lg:max-w-600 p-10 m-auto">
-
-  <h1 
-    class="text-white font-mono underline py-5 block duration-500 relative transform transition-all translate-y-12 ease-out" 
-    data-replace='{ "translate-y-12": "translate-y-0" }'
-    >
-    Animation Test
-</h1>
   <section>
-    <div class="m-auto">
+    <div class="m-auto block duration-500 relative transform transition-all delay-100 translate-y-12 ease-out opacity-0"
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>
       <dotlottie-player src="https://lottie.host/65128fba-0bd7-4555-b154-da5392556fb3/il9DRLhdLL.lottie"
         class="h-auto w-70 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop
         autoplay></dotlottie-player>
     </div>
-    <div class="m-auto">
+    <div class="m-auto block duration-500 relative transform transition-all delay-300 translate-y-12 ease-out opacity-0"
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>
       <h2 class="text-white font-mono underline py-5">Work</h2>
     </div>
   </section>
 
 
   </section>
-  <div class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 gap-4 m-auto"
+  <div
+    class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 gap-4 m-auto duration-500 relative transform transition-all delay-500 translate-y-12 ease-out opacity-0"
+    data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'
     x-data="{ videoSrc: '', showLightbox: false }">
     <template x-for="(video, index) in [
         { img: '/media/Myprotein Kaventers.png', url: 'https://videos.twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'After Effects / Trapcode Particluar' },
@@ -76,8 +74,11 @@
 
   <!-- component -->
   <secion>
-    <h2 class="text-white font-mono underline py-5">About Me</h2>
-    <p class="text-sm text-white"> Hi! I’m Charlie Dixon, a 2D/3D Motion Artist with over 12 years of industry
+    <h2
+      class="text-white font-mono underline py-5 block duration-500 relative transform transition-all delay-700 translate-y-12 ease-out opacity-0"
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>About Me</h2>
+    <p class="text-sm text-white block duration-500 relative transform transition-all delay-900 translate-y-12 ease-out opacity-0"
+    data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'> Hi! I’m Charlie Dixon, a 2D/3D Motion Artist with over 12 years of industry
       experience. I specialise in After Effects but I'm also comfortable in Cinema 4D w/Redshift.
 
       Over the years, I’ve worked in both small, agile teams and large-scale productions, adapting to different
@@ -94,12 +95,15 @@
   </secion>
 
   <secion>
-    <h2 class="text-white font-mono underline py-5">Contact</h2>
-    <p class="text-sm text-white">
+    <h2 class="text-white font-mono underline py-5 block duration-500 relative transform transition-all delay-1100 translate-y-12 ease-out opacity-0"
+    data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>Contact</h2>
+    <p class="text-sm text-white block duration-500 relative transform transition-all delay-1300 translate-y-12 ease-out opacity-0"
+    data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>
       <a href="mailto:hello@twinmotion.studio">hello@twinmotion.studio<br /></a>
 
     </p>
-    <p class="py-2 text-sm text-white">
+    <p class="py-2 text-sm text-white block duration-500 relative transform transition-all delay-1500 translate-y-12 ease-out opacity-0"
+    data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>
       <a href="https://www.linkedin.com/in/charlie-dixon-2016b960" target="_blank">LinkedIn</a>
     </p>
   </secion>
