@@ -824,6 +824,9 @@
   .w-1 {
     width: calc(var(--spacing) * 1);
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -942,6 +945,10 @@
   }
   .translate-y-12 {
     --tw-translate-y: calc(var(--spacing) * 12);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .translate-y-13 {
+    --tw-translate-y: calc(var(--spacing) * 13);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .translate-y-14 {
