@@ -1,91 +1,155 @@
 <!doctype html>
-<html>
+<html lang="en">
+
 <head>
-  <title>TwinMotion</title>
-  <link rel=“icon” href=”dist/media/Favicon.ico” type=“image/x-icon”>
-  <link rel=“shortcut icon” href=“favicon.ico” type=“image/x-icon”>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./style.css" rel="stylesheet">
+  <meta name="description" content="Charlie Dixon - 2D/3D Motion Artist with over 12 years of experience. Specializing in After Effects and Cinema 4D w/Redshift.">
+  <meta name="author" content="Charlie Dixon">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://twinmotion.studio">
+
+  <title>TwinMotion</title>
+
+  <!-- Open Graph (OG) Meta Tags for Social Media -->
+  <meta property="og:title" content="TwinMotion | Charlie Dixon - 2D/3D Motion Artist">
+  <meta property="og:description" content="Charlie Dixon - 2D/3D Motion Artist with over 12 years of experience. Specializing in After Effects and Cinema 4D w/Redshift.">
+  <meta property="og:image" content="media/TwinMotion_OG.png">
+  <meta property="og:url" content="https://twinmotion.studio">
+  <meta property="og:type" content="website">
+
+  <!-- Preload Fonts -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400" as="style">
+
+  <!-- Structured Data for Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Charlie Dixon",
+    "url": "https://twinmotion.studio",
+    "sameAs": [
+      "https://www.linkedin.com/in/charlie-dixon-2016b960"
+    ],
+    "jobTitle": "2D/3D Motion Artist",
+    "image": "media/TwinMotion_OG.png"
+  }
+  </script>
+
+  <!-- External Scripts & Styles -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x/dist/cdn.min.js" defer></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
+  <script src="tailwind.config.js"></script>
+  <link href="./style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail"
+   />
 </head>
-<body class="bg-black lg:max-w-600 p-10 m-auto">
+
+<body class="bg-black lg:max-w-600 md:px-20 px-5 py-10 m-auto">
   <section>
-    <div class="m-auto">
-    <dotlottie-player src="https://lottie.host/65128fba-0bd7-4555-b154-da5392556fb3/il9DRLhdLL.lottie" class="h-auto w-70 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
-  </div>
-  <div class="m-auto">
-  <h2 class="text-white font-mono underline py-5">Work</h2>
-  </div>
+    <div class="m-auto duration-500 relative transform transition-all delay-500 translate-y-12 ease-out opacity-0 flex justify-between"
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>
+      <dotlottie-player src="https://lottie.host/65128fba-0bd7-4555-b154-da5392556fb3/il9DRLhdLL.lottie"
+        class="h-auto sm:w-70 w-40 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop
+        autoplay></dotlottie-player>
+        <a href="mailto:hello@twinmotion.studio" class="place-content-center">
+        <button class="bg-blue-700 hover:bg-blue-500 text-white font-medium sm:h-10 h-6 sm:px-4 py-1 px-2 rounded-full sm:text-sm text-xs">
+       Contact Me
+        </button>
+      </a>
+    </div>
+
+    <div class="m-auto block duration-500 relative transform transition-all delay-1000 translate-y-12 ease-out opacity-0"
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>
+      <h2 class="text-white font-mono underline py-5">Work</h2>
+    </div>
   </section>
 
 
   </section>
-  <div class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }">
+  <div class="justify-center items-center lg:max-w-600 grid grid-cols-1 md:grid-cols-3 gap-4 m-auto"
+    x-data="{ videoSrc: '', showLightbox: false }">
     <template x-for="(video, index) in [
-        { img: '/media/Myprotein Kaventers.png', url: 'https://videos.twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'After Effects project using Trapcode Particluar to create explosions/depth' },
-        { img: '/media/Chatloop.png', url: 'https://videos.twinmotion.studio/Chatloop.mp4', title: 'Chatloop', desc: 'After Effects project using designs I created in Figma' },
-        { img: '/media/AI for good.png', url: 'https://videos.twinmotion.studio/AI%20for%20good.mp4', title: 'AI Summit 2024', desc: 'Cinema 4D project using some custom glass materials I created' }
+        { img: '/media/Myprotein Kaventers.png', url: 'https://videos.twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'After Effects / Trapcode Particluar' },
+        { img: '/media/Chatloop.png', url: 'https://videos.twinmotion.studio/Chatloop.mp4', title: 'Chatloop', desc: 'After Effects / Figma' },
+        { img: '/media/AI for good.png', url: 'https://videos.twinmotion.studio/AI%20for%20good.mp4', title: 'AI Summit 2024', desc: 'Cinema 4D / Redshift' }
     ]" :key="index">
-        <div class="relative cursor-pointer group" @click="videoSrc = video.url; showLightbox = true">
-            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-100 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-85 transition-all">
-                <h3 class="text-xl font-semibold px-5" x-text="video.title"></h3>
-                <p class="text-sm px-20" x-text="video.desc"></p>
-            </div>
-            <div>
-                <img :src="video.img" class="w-full h-auto object-cover rounded-lg shadow-lg" />
-
-            </div>
+      <div class="relative cursor-pointer group block duration-500 transform transition-all delay-1500 translate-y-12 ease-out opacity-0" 
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"}'
+      @click="videoSrc = video.url; showLightbox = true">
+        <div
+          class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-100 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-85 transition-all">
+          <h3 class="text-xl font-semibold px-5" x-text="video.title"></h3>
+          <p class="text-sm px-20" x-text="video.desc"></p>
         </div>
+        <div>
+          <img :src="video.img" class="w-full h-auto object-cover rounded-lg shadow-lg" />
+
+        </div>
+      </div>
     </template>
 
     <!-- Lightbox Modal -->
 
-      <div x-show="showLightbox" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-6" x-cloak @click="showLightbox = false; videoSrc = ''">
-        <div class="relative w-full max-w-4xl bg-black p-4 rounded-lg">
-            <button class="absolute top-2 right-2 text-white text-3xl p-3 z-50" @click="showLightbox = false; videoSrc = ''">&times;</button>
-            <div class="wrap-video"> 
-            <video x-bind:src="showLightbox ? videoSrc : ''" class="w-full aspect-video rounded-lg" controls autoplay></video>
-          </div>
+    <div x-show="showLightbox" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-6 z-1 duration-500 transform transition-all delay-2000 translate-y-12 ease-out opacity-0"
+    data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"}'
+    x-cloak
+      @click="showLightbox = false; videoSrc = ''">
+      <div class="relative w-full max-w-4xl bg-black p-4 rounded-lg">
+        <button class="absolute top-2 right-2 text-white text-3xl p-3 z-50"
+          @click="showLightbox = false; videoSrc = ''">&times;</button>
+        <div class="wrap-video">
+          <video x-bind:src="showLightbox ? videoSrc : ''" class="w-full aspect-video rounded-lg" controls
+            autoplay></video>
         </div>
+      </div>
     </div>
-    </div>
+  </div>
 
 
 
 
-    <!-- component -->
+  <!-- component -->
   <secion>
-    <h2 class="text-white font-mono underline py-5">About Me</h2>
-    <p class="text-sm text-white"> Hi! I’m Charlie Dixon, a 2D/3D Motion Artist with over 12 years of industry experience. I specialise in After Effects but I'm also comfortable in Cinema 4D w/Redshift.
+    <h2
+      class="text-white font-mono underline py-5 block duration-500 relative transform transition-all delay-2000 translate-y-12 ease-out opacity-0"
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>About Me</h2>
+    <p class="text-sm text-white block duration-500 relative transform transition-all delay-2200 translate-y-12 ease-out opacity-0"
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'> Hi! I’m Charlie Dixon, a 2D/3D
+      Motion Artist with over 12 years of industry
+      experience. I specialise in After Effects but I'm also comfortable in Cinema 4D w/Redshift.
 
-      Over the years, I’ve worked in both small, agile teams and large-scale productions, adapting to different workflows and creative challenges. I spent five years at THG Studios, where I led the Post-Production team as Director of Post-Production. <br />
-      
-      This website may be simple for now, but I built it from scratch using HTML and Tailwind CSS - a project that lets me learn and experiment as I go. Stay tuned for more content and animations as I continue to learn. <br />
-      
+      Over the years, I’ve worked in both small, agile teams and large-scale productions, adapting to different
+      workflows and creative challenges. I spent five years at THG Studios, where I led the Post-Production team as
+      Director of Post-Production. <br />
+
+      This website may be simple for now, but I built it from scratch using HTML and Tailwind CSS - a project that lets
+      me learn and experiment as I go. Stay tuned for more content and animations as I continue to learn. <br />
+
       Let’s create something great together. Get in touch!
-      
-      </p>
+
+    </p>
 
   </secion>
 
   <secion>
-    <h2 class="text-white font-mono underline py-5">Contact</h2>
-    <p class="text-sm text-white"> 
+    <h2
+      class="text-white font-mono underline py-5 block duration-500 relative transform transition-all delay-2400 translate-y-12 ease-out opacity-0"
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>Contact</h2>
+    <p class="text-sm text-white block duration-500 relative transform transition-all delay-2600 translate-y-12 ease-out opacity-0"
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>
       <a href="mailto:hello@twinmotion.studio">hello@twinmotion.studio<br /></a>
-      
-      </p>
-      <p class="py-2 text-sm text-white"> 
-        <a href= "https://www.linkedin.com/in/charlie-dixon-2016b960" target="_blank">LinkedIn</a>
-        </p>
+
+    </p>
+    <p class="py-2 text-sm text-white block duration-500 relative transform transition-all delay-2800 translate-y-12 ease-out opacity-0"
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"  }'>
+      <a href="https://www.linkedin.com/in/charlie-dixon-2016b960" target="_blank">LinkedIn</a>
+    </p>
   </secion>
 
 
 
 </body>
-</html>
 
+</html>
