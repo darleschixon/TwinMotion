@@ -948,6 +948,10 @@
     --tw-translate-y: calc(var(--spacing) * 13);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .translate-y-14 {
+    --tw-translate-y: calc(var(--spacing) * 14);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .-translate-z-px {
     --tw-translate-z: -1px;
     translate: var(--tw-translate-x) var(--tw-translate-y) var(--tw-translate-z);
