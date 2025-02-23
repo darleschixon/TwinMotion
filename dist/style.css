@@ -824,6 +824,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -2155,11 +2158,29 @@
   .transition-normal {
     transition-behavior: normal;
   }
+  .delay-100 {
+    transition-delay: 100ms;
+  }
+  .delay-300 {
+    transition-delay: 300ms;
+  }
   .delay-500 {
     transition-delay: 500ms;
   }
+  .delay-700 {
+    transition-delay: 700ms;
+  }
+  .delay-900 {
+    transition-delay: 900ms;
+  }
   .delay-1000 {
     transition-delay: 1000ms;
+  }
+  .delay-1100 {
+    transition-delay: 1100ms;
+  }
+  .delay-1300 {
+    transition-delay: 1300ms;
   }
   .delay-1500 {
     transition-delay: 1500ms;
