@@ -31,21 +31,31 @@
     </div>
   </section>
 
-<div class="justify-center items-center lg:max-w-600 grid grid-cols-1 md:grid-cols-3 gap-4 m-auto">
-  <!-- Video 1-->
-  <div class=""
-    x-data="{showLightbox: false }">
-      <div class="relative cursor-pointer" 
-      @click="showLightbox = true">
-        <div class="">
-          <img src="/media/Myprotein Kaventers.png" class="w-full h-auto object-cover rounded-lg shadow-lg" />
 
-        </div >
-        <h3 class="text-white text-xl font-semibold flex justify-center py-5" >Title</h3>
+  </section>
+  <div class="justify-center items-center lg:max-w-600 grid grid-cols-1 md:grid-cols-3 gap-4 m-auto"
+    x-data="{ videoSrc: '', showLightbox: false }">
+    <template x-for="(video, index) in [
+        { img: '/media/Myprotein Kaventers.png', url: 'https://videos.twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'After Effects / Trapcode Particluar' },
+        { img: '/media/Chatloop.png', url: 'https://videos.twinmotion.studio/Chatloop.mp4', title: 'Chatloop', desc: 'After Effects / Figma' },
+        { img: '/media/AI for good.png', url: 'https://videos.twinmotion.studio/AI%20for%20good.mp4', title: 'AI Summit 2024', desc: 'Cinema 4D / Redshift' }
+    ]" :key="index">
+      <div class="relative cursor-pointer group block duration-500 transform transition-all delay-500 translate-y-12 ease-out opacity-0" 
+      data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"}'
+      @click="videoSrc = video.url; showLightbox = true">
+        <div
+          class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-100 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-85 transition-all">
+          <h3 class="text-xl font-semibold px-5" x-text="video.title"></h3>
+          <p class="text-sm px-20" x-text="video.desc"></p>
+        </div>
+        <div>
+          <img :src="video.img" class="w-full h-auto object-cover rounded-lg shadow-lg" />
+
+        </div>
       </div>
- 
+    </template>
 
-    <!-- Lightbox Modal 1-->
+    <!-- Lightbox Modal -->
 
     <div x-show="showLightbox" class="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center p-6 z-1 duration-500 transform transition-all delay-300 translate-y-12 ease-out opacity-0"
     data-replace='{ "translate-y-12": "translate-y-0", "opacity-0": "opacity-100"}'
@@ -55,12 +65,17 @@
         <button class="absolute top-2 right-2 text-white text-3xl p-3 z-50"
           @click="showLightbox = false; videoSrc = ''">&times;</button>
         <div class="wrap-video">
-          <video src="https://videos.twinmotion.studio/Myprotein%20Kaventers.mp4" class="w-full aspect-video rounded-lg" controls autoplay></video>
+          <video x-bind:src="showLightbox ? videoSrc : ''" class="w-full aspect-video rounded-lg" controls
+            autoplay></video>
         </div>
       </div>
     </div>
   </div>
 
+
+
+
+  <!-- component -->
   <secion>
     <h2
       class="text-white font-mono underline py-5 block duration-500 relative transform transition-all delay-700 translate-y-12 ease-out opacity-0"
