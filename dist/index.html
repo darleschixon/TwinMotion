@@ -25,18 +25,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
-<body class="bg-black lg:max-w-600 p-10 m-auto">
+<body class="bg-black lg:max-w-600 md:px-20 px-5 py-10 m-auto">
   <section>
+    <div class="m-auto flex justify-between">
+      <dotlottie-player src="https://lottie.host/65128fba-0bd7-4555-b154-da5392556fb3/il9DRLhdLL.lottie"
+        class="h-auto sm:w-70 w-40 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop
+        autoplay></dotlottie-player>
+        <a href="mailto:hello@twinmotion.studio" class="place-content-center">
+        <button class="bg-blue-700 hover:bg-blue-500 text-white font-medium sm:h-10 h-6 sm:px-4 py-1 px-2 rounded-full sm:text-sm text-xs">
+       Contact Me
+        </button>
+      </a>
+    </div>
+
     <div class="m-auto">
-    <dotlottie-player src="https://lottie.host/65128fba-0bd7-4555-b154-da5392556fb3/il9DRLhdLL.lottie" class="h-auto w-70 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
-  </div>
-  <div class="m-auto">
-  <h2 class="text-white font-mono underline py-5">Work</h2>
-  </div>
+      <h2 class="text-white font-mono underline py-5">Work</h2>
+    </div>
   </section>
 
-
-  </section>
   <div class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }">
     <template x-for="(video, index) in [
         { img: '/media/Myprotein Kaventers.png', url: 'https://videos.twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'Myprotein x Keventers', desc: 'After Effects / Trapcode Particluar' },
