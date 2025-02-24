@@ -15,7 +15,7 @@
   <!-- Open Graph (OG) Meta Tags for Social Media -->
   <meta property="og:title" content="TwinMotion | Charlie Dixon - 2D/3D Motion Artist">
   <meta property="og:description" content="Charlie Dixon - 2D/3D Motion Artist with over 12 years of experience. Specializing in After Effects and Cinema 4D w/Redshift.">
-  <meta property="og:image" content="media/TwinMotion_OG.png">
+  <meta property="og:image" content="https://twinmotion.studio/media/TwinMotion_OG.png">
   <meta property="og:url" content="https://twinmotion.studio">
   <meta property="og:type" content="website">
 
@@ -39,9 +39,9 @@
   </section>
   <div class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }">
     <template x-for="(video, index) in [
-        { img: '/media/Myprotein Kaventers.png', url: 'https://videos.twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'After Effects project using Trapcode Particluar to create explosions/depth' },
-        { img: '/media/Chatloop.png', url: 'https://videos.twinmotion.studio/Chatloop.mp4', title: 'Chatloop', desc: 'After Effects project using designs I created in Figma' },
-        { img: '/media/AI for good.png', url: 'https://videos.twinmotion.studio/AI%20for%20good.mp4', title: 'AI Summit 2024', desc: 'Cinema 4D project using custom glass materials I created' }
+        { img: '/media/Myprotein Kaventers.png', url: 'https://videos.twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'Myprotein x Keventers', desc: 'After Effects / Trapcode Particluar' },
+        { img: '/media/Chatloop.png', url: 'https://videos.twinmotion.studio/Chatloop.mp4', title: 'Chatloop', desc: 'After Effects / Figma' },
+        { img: '/media/AI for good.png', url: 'https://videos.twinmotion.studio/AI%20for%20good.mp4', title: 'AI Summit 2024', desc: 'Cinema 4D / Redshift' }
     ]" :key="index">
         <div class="relative cursor-pointer group" @click="videoSrc = video.url; showLightbox = true">
             <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-100 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-85 transition-all">
@@ -95,6 +95,8 @@
         <a href= "https://www.linkedin.com/in/charlie-dixon-2016b960" target="_blank">LinkedIn</a>
         </p>
   </secion>
+  <footer class="py-20">
+  </footer>
 
 
 
