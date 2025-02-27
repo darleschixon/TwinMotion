@@ -7,6 +7,8 @@
   <link rel=“shortcut icon” href=“favicon.ico” type=“image/x-icon”>
   <link href="./style.css" rel="stylesheet">
 
+  
+
   <meta charset="UTF-8">
   <meta name="author" content="Charlie Dixon">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,23 +21,28 @@
   <meta property="og:url" content="https://twinmotion.studio">
   <meta property="og:type" content="website">
 
+
+  <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x/dist/cdn.min.js" defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
-<body class="bg-black lg:max-w-600 md:px-20 px-5 py-10 m-auto">
-  <section>
-    <div class="m-auto flex justify-between">
+
+
+<body class="bg-[url(media/Bezier BG 2_00124.webp)] lg:max-w-600 m-auto bg-cover bg-center h-screen">
+
+  <section class="sticky top-0 z-10">
+    <div class="md:px-20 px-5 m-auto flex justify-between border-1 shadow-xl backdrop-blur-xl">
       <dotlottie-player src="https://lottie.host/65128fba-0bd7-4555-b154-da5392556fb3/il9DRLhdLL.lottie"
         class="z-10 h-auto sm:w-70 w-40 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop
         autoplay></dotlottie-player>
 
-        <div class="z-1 flex items-center justify-center bg-black">
+        <div class="z-1 flex items-center justify-center">
           <div class="relative group">
               <!-- Glow Effect -->
-              <div class="absolute inset-0 mx-auto bg-gradient-to-r from-blue-500 to-red-500 
+              <div class="absolute inset-0 mx-auto bg-white
                           rounded-full sm:blur-md blur-sm opacity-100 transition-all duration-200 group-hover:opacity-100 group-hover:scale-120">
               </div>
       
@@ -51,12 +58,9 @@
       
       
   </section>
+<section class="md:px-20 px-5">
 
-    <div class="m-auto">
-      <h2 class="text-white font-mono underline py-5">Work</h2>
-    </div>
-
-  <div class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }">
+  <div class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 gap-4 m-auto py-10" x-data="{ videoSrc: '', showLightbox: false }">
     <template x-for="(video, index) in [
         { img: '/media/Myprotein Kaventers.png', url: 'https://videos.twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'Myprotein x Keventers', desc: 'After Effects / Trapcode Particluar' },
         { img: '/media/Chatloop.png', url: 'https://videos.twinmotion.studio/Chatloop.mp4', title: 'Chatloop', desc: 'After Effects / Figma' },
@@ -90,8 +94,12 @@
 
 
     <!-- component -->
-  <secion class="py-10">
-    <h2 class="text-white font-mono underline py-5">About Me</h2>
+    
+    <secion class="py-10">
+    <div class="space-y-5">
+
+    <div class="backdrop-blur-xl bg-opacity-80 shadow-xl rounded-md p-5">
+    <h2 class="text-white font-mono underline back">About Me</h2>
     <p class="text-sm text-white"> Hi! I’m Charlie Dixon, a 2D/3D Motion Artist with over 12 years of industry experience. I specialise in After Effects but I'm also comfortable in Cinema 4D w/Redshift.
 
       Over the years, I’ve worked in both small, agile teams and large-scale productions, adapting to different workflows and creative challenges. I spent five years at THG Studios, where I led the Post-Production team as Director of Post-Production. <br />
@@ -101,10 +109,9 @@
       Let’s create something great together. Get in touch!
       
       </p>
+    </div>
 
-  </secion>
-
-  <secion class="py-10">
+    <div class="backdrop-blur-xl bg-opacity-80 shadow-xl rounded-md p-5">
     <h2 class="text-white font-mono underline py-5">Contact</h2>
     <p class="text-sm text-white"> 
       <a href="mailto:hello@twinmotion.studio">hello@twinmotion.studio<br /></a>
@@ -113,11 +120,12 @@
       <p class="py-2 text-sm text-white"> 
         <a href= "https://www.linkedin.com/in/charlie-dixon-2016b960" target="_blank">LinkedIn</a>
         </p>
-  </secion>
+      </div>
   <footer class="py-20">
   </footer>
+</div>
+</section>
 
-
-
+</section>
 </body>
 </html>
