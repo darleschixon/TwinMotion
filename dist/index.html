@@ -41,7 +41,6 @@
     <template x-for="(video, index) in [
         { img: '/media/Myprotein Kaventers.png', url: 'https://videos.twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'Myprotein x Keventers', desc: 'After Effects / Trapcode Particluar' },
         { img: '/media/Chatloop.png', url: 'https://videos.twinmotion.studio/Chatloop.mp4', title: 'Chatloop', desc: 'After Effects / Figma' },
-        { img: '/media/Isovibe still.png', url: 'https://videos.twinmotion.studio/Isovibe%20Promo%2016x9.mp4', title: 'Isovibe', desc: 'Cinema 4D / Redshift' }
         { img: '/media/AI for good.png', url: 'https://videos.twinmotion.studio/AI%20for%20good.mp4', title: 'AI Summit 2024', desc: 'Cinema 4D / Redshift' }
     ]" :key="index">
         <div class="relative cursor-pointer group" @click="videoSrc = video.url; showLightbox = true">
