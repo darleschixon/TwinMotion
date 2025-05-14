@@ -713,6 +713,9 @@
   .m-auto {
     margin: auto;
   }
+  .mr-6 {
+    margin-right: calc(var(--spacing) * 6);
+  }
   .box-border {
     box-sizing: border-box;
   }
@@ -821,6 +824,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -2287,6 +2293,13 @@
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         opacity: 85%;
+      }
+    }
+  }
+  .hover\:underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
       }
     }
   }
