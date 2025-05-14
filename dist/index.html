@@ -30,24 +30,14 @@
     <div class="m-auto">
     <dotlottie-player src="https://lottie.host/65128fba-0bd7-4555-b154-da5392556fb3/il9DRLhdLL.lottie" class="h-auto w-70 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
   </div>
-
+  <div class="m-auto">
+  <h2 class="text-white font-mono underline py-5">Work</h2>
+  </div>
   </section>
 
 
   </section>
-
-  <nav class="flex py-5">
-    <div class="mr-6">
-      <a class="text-white font-mono hover:underline" href="#">Work</a>
-    </div>
-    <div class="mr-6">
-      <a class="text-white font-mono hover:underline" href="#">About</a>
-    </div>
-    <div class="mr-6">
-      <a class="text-white font-mono hover:underline" href="#">Contact</a>
-    </div>
-  </nav>
-  <div class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 xl:grid-rows-2 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }">
+  <div class="justify-center items-center lg:max-w-600 grid lg:grid-cols-3 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }">
     <template x-for="(video, index) in [
         { img: '/media/Isovibe still.png', url: 'https://videos.twinmotion.studio/Isovibe%20Promo%2016x9.mp4', title: 'Isovibe', desc: 'Cinema 4D / Redshift' },
         { img: '/media/Black Mirror Still2.png', url: 'https://videos.twinmotion.studio/Black%20Mirror.MP4' , title: 'Netflix - Black Mirror', desc: 'After Effects VFX' },
@@ -84,32 +74,43 @@
 
 
     <!-- component -->
-  <secion>
-    <div class="py-20">
-      <div class="flex -space-x-1 overflow-hidden">
-      <img class="inline-block size-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-    <h2 class="text-white font-mono underline py-5">About Me</h2>
-    <p class="text-sm text-white"> Hi! I’m Charlie Dixon, a 2D/3D Motion Artist with over 12 years of industry experience. I specialise in After Effects and Cinema 4D w/Redshift.
-
-      Over the years, I’ve worked in both small, agile teams and large-scale productions, adapting to different workflows and creative challenges. I spent five years at THG Studios, where I led the Post-Production team as Director of Post-Production. <br />
-      
-      This website may be simple for now, but I built it from scratch using HTML and Tailwind CSS - a project that lets me learn and experiment as I go. Stay tuned for more content and animations as I continue to learn. <br />
-      
-      Let’s create something great together. Get in touch!
-      
+  <secion class="flex md:flex-row flex-col items-center lg:mx-20 xl:mx-40 py-10">
+    <img class=" rounded-full m-10 size-50 sm:items-start" src="/media/Profile.jpeg" alt="">
+    <div>
+      <p class="text-sm py-2 text-white"> Hi! I’m Charlie Dixon, a 2D/3D Motion Artist with over 12 years of industry experience. I specialise in After Effects and Cinema 4D w/Redshift.  <br />
       </p>
-    </div>
+
+      <p class="text-sm py-2 text-white"> 
+        Over the years, I’ve worked in both small, agile teams and large-scale productions, adapting to different workflows and creative challenges. I spent five years at THG Studios, where I led the Post-Production team as Director of Post-Production. <br />    
+      </p>
+      <p class="text-sm py-2 text-white"> 
+        This website may be simple for now, but I built it from scratch using HTML and Tailwind CSS - a project that lets me learn and experiment as I go. Stay tuned for more content and animations as I continue to learn. <br />
+      </p>
+      <p class="text-sm py-2 text-white"> 
+        Let’s create something great together. Get in touch!
+      </p>
+      </div>
   </secion>
 
   <secion>
-    <h2 class="text-white font-mono underline py-5">Contact</h2>
-    <p class="text-sm text-white"> 
+    <div class="flex flex-col items-center">
+      <div>
+    <h2 class="text-white py-5 font-mono underline">Contact</h2>
+    </div>  
+    <div>
+    <p class="text-sm py-2 text-white"> 
       <a href="mailto:hello@twinmotion.studio">hello@twinmotion.studio<br /></a>
       
-      </p>
-      <p class="py-2 text-sm text-white"> 
+    </div>
+    <div>
+      <p class="text-sm py-2 text-white"> 
         <a href= "https://www.linkedin.com/in/charlie-dixon-2016b960" target="_blank">LinkedIn</a>
-        </p>
+    </div>
+    <div>
+      <p class="text-sm py-2 text-white"> 
+        <a href= "https://www.instagram.com/twinmotion.studio/" target="_blank">Instagram</a>
+    </div>
+        </div>
   </secion>
   <footer class="py-20">
   </footer>

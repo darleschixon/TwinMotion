@@ -707,11 +707,11 @@
       max-width: 96rem !important;
     }
   }
+  .m-10 {
+    margin: calc(var(--spacing) * 10);
+  }
   .m-auto {
     margin: auto;
-  }
-  .mr-6 {
-    margin-right: calc(var(--spacing) * 6);
   }
   .box-border {
     box-sizing: border-box;
@@ -803,9 +803,9 @@
   .aspect-video {
     aspect-ratio: var(--aspect-video);
   }
-  .size-6 {
-    width: calc(var(--spacing) * 6);
-    height: calc(var(--spacing) * 6);
+  .size-50 {
+    width: calc(var(--spacing) * 50);
+    height: calc(var(--spacing) * 50);
   }
   .h-auto {
     height: auto;
@@ -1256,13 +1256,6 @@
       --tw-space-y-reverse: 1;
     }
   }
-  .-space-x-1 {
-    :where(& > :not(:last-child)) {
-      --tw-space-x-reverse: 0;
-      margin-inline-start: calc(calc(var(--spacing) * -1) * var(--tw-space-x-reverse));
-      margin-inline-end: calc(calc(var(--spacing) * -1) * calc(1 - var(--tw-space-x-reverse)));
-    }
-  }
   .space-x-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 1;
@@ -1342,9 +1335,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-  }
-  .overflow-hidden {
-    overflow: hidden;
   }
   .scroll-auto {
     scroll-behavior: auto;
@@ -1686,6 +1676,9 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .py-10 {
+    padding-block: calc(var(--spacing) * 10);
+  }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
   }
@@ -1995,10 +1988,6 @@
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentColor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .ring-2 {
-    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentColor);
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -2009,9 +1998,6 @@
   }
   .shadow-initial {
     --tw-shadow-color: initial;
-  }
-  .ring-white {
-    --tw-ring-color: var(--color-white);
   }
   .inset-shadow-initial {
     --tw-inset-shadow-color: initial;
@@ -2304,11 +2290,19 @@
       }
     }
   }
-  .hover\:underline {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
-      }
+  .sm\:items-start {
+    @media (width >= 40rem) {
+      align-items: flex-start;
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .lg\:mx-20 {
+    @media (width >= 64rem) {
+      margin-inline: calc(var(--spacing) * 20);
     }
   }
   .lg\:max-w-600 {
@@ -2316,14 +2310,19 @@
       max-width: calc(var(--spacing) * 600);
     }
   }
-  .xl\:grid-cols-3 {
-    @media (width >= 80rem) {
+  .lg\:grid-cols-3 {
+    @media (width >= 64rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
-  .xl\:grid-rows-2 {
+  .xl\:mx-40 {
     @media (width >= 80rem) {
-      grid-template-rows: repeat(2, minmax(0, 1fr));
+      margin-inline: calc(var(--spacing) * 40);
+    }
+  }
+  .xl\:grid-cols-3 {
+    @media (width >= 80rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
   .\[\&_\[x-cloak\]\]\:hidden {
