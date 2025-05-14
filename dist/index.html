@@ -44,7 +44,7 @@
     </div>
   </nav>
   </section>
-  <div class="justify-center items-center lg:max-w-600 grid lg:grid-cols-3 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }" href="#work">
+  <div class="justify-center items-center lg:max-w-600 grid lg:grid-cols-3 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }" id="work">
     <template x-for="(video, index) in [
         { img: '/media/Isovibe still.png', url: 'https://videos.twinmotion.studio/Isovibe%20Promo%2016x9.mp4', title: 'Isovibe', desc: 'Cinema 4D / Redshift' },
         { img: '/media/Black Mirror Still2.png', url: 'https://videos.twinmotion.studio/Black%20Mirror.MP4' , title: 'Netflix - Black Mirror', desc: 'After Effects VFX' },
@@ -81,7 +81,7 @@
 
 
     <!-- component -->
-  <secion class="flex md:flex-row flex-col items-center lg:mx-20 xl:mx-40 py-10" href="#about">
+  <secion class="flex md:flex-row flex-col items-center lg:mx-20 xl:mx-40 py-10" id="about">
     <img class=" rounded-full m-10 size-50 sm:items-start" src="/media/Profile.jpeg" alt="">
     <div>
       <p class="text-sm py-2 text-white"> Hi! I’m Charlie Dixon, a 2D/3D Motion Artist with over 12 years of industry experience. I specialise in After Effects and Cinema 4D w/Redshift.  <br />
@@ -100,7 +100,7 @@
   </secion>
 
   <secion>
-    <div class="flex flex-col items-center" href="#contact">
+    <div class="flex flex-col items-center" id="contact">
       <div>
     <h2 class="text-white py-5 font-mono underline">Contact</h2>
     </div>  
