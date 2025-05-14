@@ -2290,6 +2290,13 @@
       }
     }
   }
+  .hover\:underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
+      }
+    }
+  }
   .lg\:max-w-600 {
     @media (width >= 64rem) {
       max-width: calc(var(--spacing) * 600);
