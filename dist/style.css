@@ -710,6 +710,9 @@
   .m-auto {
     margin: auto;
   }
+  .mr-6 {
+    margin-right: calc(var(--spacing) * 6);
+  }
   .box-border {
     box-sizing: border-box;
   }
@@ -1810,6 +1813,9 @@
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
   }
+  .text-blue-500 {
+    color: var(--color-blue-500);
+  }
   .text-white {
     color: var(--color-white);
   }
@@ -2274,6 +2280,13 @@
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         opacity: 85%;
+      }
+    }
+  }
+  .hover\:text-blue-800 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-blue-800);
       }
     }
   }
