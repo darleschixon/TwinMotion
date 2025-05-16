@@ -1374,6 +1374,9 @@
   .overflow-hidden {
     overflow: hidden;
   }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
   .scroll-auto {
     scroll-behavior: auto;
   }
