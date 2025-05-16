@@ -28,15 +28,15 @@
 <body class="bg-black lg:max-w-600 m-auto">
   <section>
     <div class="px-2 -m-2 mt-1 flex flex-row items-center justify-between">
-    <dotlottie-player src="https://lottie.host/65128fba-0bd7-4555-b154-da5392556fb3/il9DRLhdLL.lottie" class="h-auto w-70 ml-18 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
-    <nav class="flex">
-      <div class="mr-6">
+    <dotlottie-player src="https://lottie.host/65128fba-0bd7-4555-b154-da5392556fb3/il9DRLhdLL.lottie" class="h-auto w-40 lg:w-70 ml-8 lg:ml-18 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+    <nav class="flex gap-2 lg:gap-6 text-xs lg:text-lg mr-2 lg:mr-6">
+      <div class="">
         <a class="text-white font-mono hover:underline" href="mailto:hello@twinmotion.studio">Email</a>
       </div>
-      <div class="mr-6">
+      <div class="">
         <a class="text-white font-mono hover:underline" href="https://www.linkedin.com/in/charlie-dixon-2016b960">LinkedIn</a>
       </div>
-      <div class="mr-6">
+      <div class="">
         <a class="text-white font-mono hover:underline" href="https://www.instagram.com/twinmotion.studio">Instagram</a>
       </div>
     </nav>
@@ -44,10 +44,10 @@
 
   </section>
   <div class="flex lg:items-center items-start">
-<div class="rotate-270 lg:mt-30 mt-45">
-  <h2 class=" font-bold text-white fixed py-2 font-nunitosans text-5xl italic">WORK</h2>
+<div class="rotate-270 lg:ml-1 lg:mt-30 mt-45">
+  <h2 class=" font-bold text-white fixed py-2 font-nunitosans text-xl lg:text-5xl italic">WORK</h2>
 </div>
-  <div class="justify-center items-center lg:max-w-600 ml-14 grid lg:grid-cols-3 gap-4 p-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }" id="work">
+  <div class="justify-center items-center lg:max-w-600 ml-7 lg:ml-14 grid lg:grid-cols-3 gap-4 p-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }" id="work">
     <template x-for="(video, index) in [
         { img: '/media/Isovibe still.png', url: 'https://videos.twinmotion.studio/Isovibe%20Promo%2016x9.mp4', title: 'Isovibe', desc: 'Cinema 4D / Redshift' },
         { img: '/media/Black Mirror Still2.png', url: 'https://videos.twinmotion.studio/Black%20Mirror.MP4' , title: 'Netflix - Black Mirror', desc: 'After Effects VFX' },
@@ -84,29 +84,34 @@
   </div>
 
     <!-- component -->
-  <secion class="flex flex-row gap-8 items-center py-10" id="about">
-    <div class ="rotate-270 ml-2 mt-16">
-    <h2 class="font-bold text-white fixed flex-none font-nunitosans text-5xl italic">ME</h2>
-  </div>
-  <div class=""></div>
-    <img class="rounded-lg size-50" src="/media/Profile.jpeg" alt="">
-    <div class="w-200 mr-10">
-      <p class="text-sm py-2 text-white"> Hi, I’m Charlie Dixon — a 2D/3D Motion Artist with 12+ years’ experience.
-          <br />
-      </p>
 
-      <p class="text-sm py-2 text-white"> 
-        I specialise in After Effects and Cinema 4D with Redshift. <br />    
-      </p>
-      <p class="text-sm py-2 text-white"> 
-        Former Director of Post-Production at THG Studios. <br />
-      </p>
-      <p class="text-sm py-2 text-white"> 
+<div class="mx-auto mt-20 overflow-hidden w-90 lg:w-250 bg-black font-nunitosans italic shadow-white">
+  <div class="lg:flex lg:justify-center">
+    <div class="lg:shrink-0">
+      <img
+        class="h-48 w-full rounded-lg object-cover"
+        src="/media/Profile.jpeg"
+        alt="Charlie Dixon"
+      />
+    </div>
+    <div class="mt-5 lg:ml-10">
+      <div class="text-lg font-black text-white py-1 uppercase">Charlie Dixon</div>
+      <p href="#" class="mt-1 py-5 text-lg font-medium text-white">
+        2D/3D Motion Artist with 12+ years’ experience
+      </p >
+      <p class="text-md text-white">
+              I specialise in After Effects and Cinema 4D with Redshift.
+        Former Director of Post-Production at THG Studios. 
         Let’s create something great together. Get in touch!
       </p>
     </div>
-      </div>
-  </secion>
+  </div>
+</div>
+
+
+
+
+
 
   <footer class="py-20">
   </footer>
