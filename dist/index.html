@@ -25,29 +25,39 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
-<body class="bg-black lg:max-w-600 p-10 m-auto">
+<body class="bg-black lg:max-w-600 m-auto">
   <section>
-    <div class="m-auto">
-    <dotlottie-player src="https://lottie.host/65128fba-0bd7-4555-b154-da5392556fb3/il9DRLhdLL.lottie" class="h-auto w-70 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
-  </div>
-  <div class="m-auto">
-  <h2 class="text-white font-mono underline py-5">Work</h2>
-  </div>
+    <div class="px-2 -m-2 mt-1 flex flex-row items-center justify-between">
+    <dotlottie-player src="https://lottie.host/65128fba-0bd7-4555-b154-da5392556fb3/il9DRLhdLL.lottie" class="h-auto w-40 lg:w-70 ml-4 lg:ml-18 justify-start" background="transparent" speed="1" direction="1" playMode="normal" loop autoplay></dotlottie-player>
+    <nav class="flex gap-2 lg:gap-6 text-xs lg:text-lg mr-2 lg:mr-6">
+      <div class="">
+        <a class="text-white font-mono hover:underline" href="mailto:hello@twinmotion.studio">Email</a>
+      </div>
+      <div class="">
+        <a class="text-white font-mono hover:underline" href="https://www.linkedin.com/in/charlie-dixon-2016b960">LinkedIn</a>
+      </div>
+      <div class="">
+        <a class="text-white font-mono hover:underline" href="https://www.instagram.com/twinmotion.studio">Instagram</a>
+      </div>
+    </nav>
   </section>
 
-
   </section>
-  <div class="justify-center items-center lg:max-w-600 grid xl:grid-cols-3 xl:grid-rows-2 gap-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }">
+  <div class="flex lg:items-center items-start">
+<div class="rotate-270 lg:ml-1 lg:mt-30 mt-45">
+  <h2 class=" font-bold text-white fixed py-2 font-nunitosans text-xl lg:text-5xl italic">WORK</h2>
+</div>
+  <div class="justify-center items-center lg:max-w-600 ml-7 lg:ml-14 grid lg:grid-cols-3 gap-4 p-4 m-auto" x-data="{ videoSrc: '', showLightbox: false }" id="work">
     <template x-for="(video, index) in [
         { img: '/media/Isovibe still.png', url: 'https://videos.twinmotion.studio/Isovibe%20Promo%2016x9.mp4', title: 'Isovibe', desc: 'Cinema 4D / Redshift' },
         { img: '/media/Black Mirror Still2.png', url: 'https://videos.twinmotion.studio/Black%20Mirror.MP4' , title: 'Netflix - Black Mirror', desc: 'After Effects VFX' },
         { img: '/media/Myprotein Kaventers.png', url: 'https://videos.twinmotion.studio/Myprotein%20Kaventers.mp4' , title: 'Myprotein x Keventers', desc: 'After Effects / Trapcode Particluar' },
-        { img: '/media/Chatloop.png', url: 'https://videos.twinmotion.studio/Chatloop.mp4', title: 'Chatloop', desc: 'After Effects / Figma' },
         { img: '/media/AI for good.png', url: 'https://videos.twinmotion.studio/AI%20for%20good.mp4', title: 'AI Summit 2024', desc: 'Cinema 4D / Redshift' },
+        { img: '/media/Chatloop.png', url: 'https://videos.twinmotion.studio/Chatloop.mp4', title: 'Chatloop', desc: 'After Effects / Figma' },
         { img: '/media/Horlicks Still.png', url: 'https://videos.twinmotion.studio/Horlicks.mp4', title: 'Horlicks', desc: 'After Effects' }
     ]" :key="index">
         <div class="relative cursor-pointer group" @click="videoSrc = video.url; showLightbox = true">
-            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-100 flex flex-col justify-center items-center text-white opacity-0 group-hover:opacity-85 transition-all">
+            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-100 flex flex-col justify-center items-center font-nunitosans text-5xl italic text-white opacity-0 group-hover:opacity-85 transition-all">
                 <h3 class="text-xl font-semibold px-5" x-text="video.title"></h3>
                 <p class="text-sm px-20" x-text="video.desc"></p>
             </div>
@@ -71,33 +81,38 @@
     </div>
 
 
-
+  </div>
 
     <!-- component -->
-  <secion>
-    <h2 class="text-white font-mono underline py-5">About Me</h2>
-    <p class="text-sm text-white"> Hi! I’m Charlie Dixon, a 2D/3D Motion Artist with over 12 years of industry experience. I specialise in After Effects and Cinema 4D w/Redshift.
 
-      Over the years, I’ve worked in both small, agile teams and large-scale productions, adapting to different workflows and creative challenges. I spent five years at THG Studios, where I led the Post-Production team as Director of Post-Production. <br />
-      
-      This website may be simple for now, but I built it from scratch using HTML and Tailwind CSS - a project that lets me learn and experiment as I go. Stay tuned for more content and animations as I continue to learn. <br />
-      
-      Let’s create something great together. Get in touch!
-      
+<div class="mx-auto mt-20 overflow-hidden w-90 lg:w-250 bg-black font-nunitosans italic shadow-white">
+  <div class="lg:flex lg:justify-center">
+    <div class="lg:shrink-0">
+      <img
+        class="h-48 w-full rounded-lg object-cover"
+        src="/media/Profile.jpeg"
+        alt="Charlie Dixon"
+      />
+    </div>
+    <div class="mt-5 lg:ml-10">
+      <div class="text-lg font-black text-white py-1 uppercase">Charlie Dixon</div>
+      <p href="#" class="mt-1 py-5 text-lg font-medium text-white">
+        2D/3D Motion Artist with 12+ years’ experience
+      </p >
+      <p class="text-md text-white">
+              I specialise in After Effects and Cinema 4D with Redshift.
+        Former Director of Post-Production at THG Studios. 
+        Let’s create something great together. Get in touch!
       </p>
+    </div>
+  </div>
+</div>
 
-  </secion>
 
-  <secion>
-    <h2 class="text-white font-mono underline py-5">Contact</h2>
-    <p class="text-sm text-white"> 
-      <a href="mailto:hello@twinmotion.studio">hello@twinmotion.studio<br /></a>
-      
-      </p>
-      <p class="py-2 text-sm text-white"> 
-        <a href= "https://www.linkedin.com/in/charlie-dixon-2016b960" target="_blank">LinkedIn</a>
-        </p>
-  </secion>
+
+
+
+
   <footer class="py-20">
   </footer>
 
